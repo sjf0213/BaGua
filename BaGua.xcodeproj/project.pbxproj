@@ -44,6 +44,7 @@
 		F00A59ED1D86839700754746 /* AFURLResponseSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLResponseSerialization.m; sourceTree = "<group>"; };
 		F00A59EE1D86839700754746 /* AFURLSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLSessionManager.h; sourceTree = "<group>"; };
 		F00A59EF1D86839700754746 /* AFURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLSessionManager.m; sourceTree = "<group>"; };
+		F00A59FC1D86886200754746 /* Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Prefix.pch; path = BaGua/Prefix.pch; sourceTree = "<group>"; };
 		F0F7D5871D82BD6600C88E2B /* BaGua.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BaGua.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0F7D58B1D82BD6600C88E2B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F0F7D58D1D82BD6600C88E2B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -102,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				F0F7D5891D82BD6600C88E2B /* BaGua */,
+				F00A59FC1D86886200754746 /* Prefix.pch */,
 				F0F7D5931D82BD6700C88E2B /* Main.storyboard */,
 				F0F7D5961D82BD6700C88E2B /* Assets.xcassets */,
 				F0F7D5981D82BD6700C88E2B /* LaunchScreen.storyboard */,
@@ -345,6 +347,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer: AppleDev Fan (D8H7TG5ERQ)";
 				DEVELOPMENT_TEAM = RL29TLP4PX;
+				GCC_PREFIX_HEADER = BaGua/Prefix.pch;
 				INFOPLIST_FILE = BaGua/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.appdream.BaGua;
@@ -359,6 +362,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = "";
+				GCC_PREFIX_HEADER = BaGua/Prefix.pch;
 				INFOPLIST_FILE = BaGua/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.appdream.BaGua;

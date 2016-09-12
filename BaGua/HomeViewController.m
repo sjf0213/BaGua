@@ -7,7 +7,7 @@
 //
 
 #import "HomeViewController.h"
-
+#import "BGEngine.h"
 @interface HomeViewController ()
 
 @end
@@ -17,11 +17,28 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    [self startRequest];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(void)startRequest
+{
+    typeof(self) __weak wself = self;
+    
+    // 请求推荐应用列表
+    NSURLSessionTask* task = [BGEngine homepageByParam:nil contentWithBlock:^(NSDictionary *result, NSError *error) {
+        if (nil == error) {
+            DLog(@"---Home List---%@",result);
+            
+        }else{
+            DLog(@"--error.code = %zd, description = %@", error.code, [error localizedDescription]);
+            
+        }
+    }];
 }
 
 /*

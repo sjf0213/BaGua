@@ -10,4 +10,5 @@
 
 @interface BGEngine : NSObject
 
++ (NSURLSessionDataTask *)homepageByParam:(NSDictionary*)param contentWithBlock:(void (^)(NSDictionary *result, NSError *error))block;
 @end

@@ -26,7 +26,7 @@
         <!--Home-->
         <scene sceneID="tew-Oy-qj0">
             <objects>
-                <viewController id="xNW-Dv-Ie8" userLabel="Home" sceneMemberID="viewController">
+                <viewController id="xNW-Dv-Ie8" userLabel="Home" customClass="HomeViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="m57-tD-57Q"/>
                         <viewControllerLayoutGuide type="bottom" id="WWP-ra-yOY"/>

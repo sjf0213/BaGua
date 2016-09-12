@@ -10,4 +10,8 @@
 #import "AFNetworking.h"
 @interface BGClient : AFHTTPSessionManager
 
++ (instancetype)sharedClient;
++ (NSString*)mainHostURL;
+
+
 @end
