@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F00A59D51D867DC600754746 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F00A59D41D867DC600754746 /* HomeViewController.m */; };
 		F0F7D58C1D82BD6600C88E2B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F0F7D58B1D82BD6600C88E2B /* main.m */; };
 		F0F7D58F1D82BD6600C88E2B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F0F7D58E1D82BD6600C88E2B /* AppDelegate.m */; };
 		F0F7D5921D82BD6600C88E2B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0F7D5911D82BD6600C88E2B /* ViewController.m */; };
@@ -16,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F00A59D31D867DC600754746 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		F00A59D41D867DC600754746 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		F0F7D5871D82BD6600C88E2B /* BaGua.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BaGua.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0F7D58B1D82BD6600C88E2B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F0F7D58D1D82BD6600C88E2B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -58,15 +61,17 @@
 		F0F7D5891D82BD6600C88E2B /* BaGua */ = {
 			isa = PBXGroup;
 			children = (
-				F0F7D58D1D82BD6600C88E2B /* AppDelegate.h */,
-				F0F7D58E1D82BD6600C88E2B /* AppDelegate.m */,
-				F0F7D5901D82BD6600C88E2B /* ViewController.h */,
-				F0F7D5911D82BD6600C88E2B /* ViewController.m */,
 				F0F7D5931D82BD6700C88E2B /* Main.storyboard */,
 				F0F7D5961D82BD6700C88E2B /* Assets.xcassets */,
 				F0F7D5981D82BD6700C88E2B /* LaunchScreen.storyboard */,
 				F0F7D59B1D82BD6700C88E2B /* Info.plist */,
 				F0F7D58A1D82BD6600C88E2B /* Supporting Files */,
+				F0F7D58D1D82BD6600C88E2B /* AppDelegate.h */,
+				F0F7D58E1D82BD6600C88E2B /* AppDelegate.m */,
+				F0F7D5901D82BD6600C88E2B /* ViewController.h */,
+				F0F7D5911D82BD6600C88E2B /* ViewController.m */,
+				F00A59D31D867DC600754746 /* HomeViewController.h */,
+				F00A59D41D867DC600754746 /* HomeViewController.m */,
 			);
 			path = BaGua;
 			sourceTree = "<group>";
@@ -110,6 +115,8 @@
 				TargetAttributes = {
 					F0F7D5861D82BD6600C88E2B = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = RL29TLP4PX;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -152,6 +159,7 @@
 				F0F7D5921D82BD6600C88E2B /* ViewController.m in Sources */,
 				F0F7D58F1D82BD6600C88E2B /* AppDelegate.m in Sources */,
 				F0F7D58C1D82BD6600C88E2B /* main.m in Sources */,
+				F00A59D51D867DC600754746 /* HomeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -195,7 +203,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: AppleDev Fan (D8H7TG5ERQ)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: AppleDev Fan (D8H7TG5ERQ)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -217,6 +226,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "e3d570e4-ad1d-446d-80ce-d6f44ea35ce9";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -254,6 +264,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PROVISIONING_PROFILE = "e3d570e4-ad1d-446d-80ce-d6f44ea35ce9";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -263,10 +274,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: AppleDev Fan (D8H7TG5ERQ)";
+				DEVELOPMENT_TEAM = RL29TLP4PX;
 				INFOPLIST_FILE = BaGua/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.appdream.BaGua;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "e3a086f0-b472-4a45-847e-d219c1590209";
+				PROVISIONING_PROFILE_SPECIFIER = Fantest;
 			};
 			name = Debug;
 		};
@@ -274,10 +289,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = BaGua/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.appdream.BaGua;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Release;
 		};
@@ -300,6 +318,7 @@
 				F0F7D5A01D82BD6700C88E2B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
