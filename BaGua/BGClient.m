@@ -19,7 +19,7 @@ NSString* host = @"d.api.budejie.com";
         _sharedClient = [[BGClient alloc] init];
         _sharedClient.securityPolicy = [AFSecurityPolicy policyWithPinningMode:AFSSLPinningModeNone];
         _sharedClient.requestSerializer = [AFJSONRequestSerializer serializer];
-        _sharedClient.responseSerializer = [AFHTTPResponseSerializer serializer];
+        _sharedClient.responseSerializer = [AFJSONResponseSerializer serializer];
     });
     return _sharedClient;
 }
