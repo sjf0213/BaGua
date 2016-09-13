@@ -9,7 +9,7 @@
 #import "BGEngine.h"
 #import "BGClient.h"
 
-const NSString* testURL = @"http://d.api.budejie.com/topic/recommend/bs0315-iphone-4.3/0-30.json?openudid=d41d8cd98f00b204e9800998ecf8427e617c93e8&appname=bs0315&asid=D39B26EB-4CB0-4789-85AD-B2E8F4A27BD1&client=iphone&device=iPhone%205&from=ios&jbk=0&mac=&market=&openudid=d41d8cd98f00b204e9800998ecf8427e617c93e8&udid=&ver=4.3";
+const NSString* testURL = @"topic/recommend/bs0315-iphone-4.3/0-30.json?openudid=d41d8cd98f00b204e9800998ecf8427e617c93e8&appname=bs0315&asid=D39B26EB-4CB0-4789-85AD-B2E8F4A27BD1&client=iphone&device=iPhone%205&from=ios&jbk=0&mac=&market=&openudid=d41d8cd98f00b204e9800998ecf8427e617c93e8&udid=&ver=4.3";
 
 @implementation BGEngine
 

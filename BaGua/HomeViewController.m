@@ -27,10 +27,8 @@
 
 -(void)startRequest
 {
-    typeof(self) __weak wself = self;
     
-    // 请求推荐应用列表
-    NSURLSessionTask* task = [BGEngine homepageByParam:nil contentWithBlock:^(NSDictionary *result, NSError *error) {
+    [BGEngine homepageByParam:nil contentWithBlock:^(NSDictionary *result, NSError *error) {
         if (nil == error) {
             DLog(@"---Home List---%@",result);
             
