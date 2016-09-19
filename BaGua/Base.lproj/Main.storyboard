@@ -34,9 +34,32 @@
                     <view key="view" contentMode="scaleToFill" restorationIdentifier="HomeViewController" id="ueR-55-o7f">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TLw-lL-Gz7" userLabel="Top">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="qfX-Be-qQa"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="8Hz-ft-spK">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="8Hz-ft-spK" secondAttribute="trailing" id="1Bx-rv-aet"/>
+                            <constraint firstItem="8Hz-ft-spK" firstAttribute="top" secondItem="ueR-55-o7f" secondAttribute="top" constant="64" id="1DS-3k-Z3M"/>
+                            <constraint firstItem="TLw-lL-Gz7" firstAttribute="leading" secondItem="ueR-55-o7f" secondAttribute="leading" id="1Li-6d-W2V"/>
+                            <constraint firstAttribute="trailing" secondItem="TLw-lL-Gz7" secondAttribute="trailing" id="Eqb-CY-Xgm"/>
+                            <constraint firstItem="8Hz-ft-spK" firstAttribute="leading" secondItem="ueR-55-o7f" secondAttribute="leading" id="PRb-8G-mXR"/>
+                            <constraint firstAttribute="bottom" secondItem="8Hz-ft-spK" secondAttribute="bottom" id="TF3-re-bOI"/>
+                            <constraint firstItem="TLw-lL-Gz7" firstAttribute="top" secondItem="ueR-55-o7f" secondAttribute="top" id="xVI-oH-T26"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" id="xf4-y2-JuB"/>
+                    <connections>
+                        <outlet property="mainTable" destination="8Hz-ft-spK" id="HFk-gD-9lk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gPW-mj-m5e" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

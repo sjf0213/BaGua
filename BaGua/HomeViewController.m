@@ -8,16 +8,24 @@
 
 #import "HomeViewController.h"
 #import "BGEngine.h"
+#import "MJRefresh.h"
 @interface HomeViewController ()
-
+@property (strong, nonatomic) IBOutlet UITableView* mainTable;
 @end
 
 @implementation HomeViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-    [self startRequest];
+    __weak typeof(self) wself = self;
+    // 设置回调（一旦进入刷新状态就会调用这个refreshingBlock）
+    self.mainTable.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+        [wself startRequest];
+    }];
+    
+    // 马上进入刷新状态
+    [self.mainTable.mj_header beginRefreshing];
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -36,6 +44,7 @@
             DLog(@"--error.code = %zd, description = %@", error.code, [error localizedDescription]);
             
         }
+        [self.mainTable.mj_header endRefreshing];
     }];
 }
 
