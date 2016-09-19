@@ -9,7 +9,7 @@
 #import "HomeViewController.h"
 #import "BGEngine.h"
 #import "MJRefresh.h"
-@interface HomeViewController ()
+@interface HomeViewController ()<UITableViewDataSource, UITableViewDelegate>
 @property (strong, nonatomic) IBOutlet UITableView* mainTable;
 @property (strong, nonatomic) NSMutableArray* dataList;
 @end
@@ -20,6 +20,11 @@
     [super viewDidLoad];
     self.dataList = [NSMutableArray array];
     __weak typeof(self) wself = self;
+    
+    self.mainTable.dataSource = self;
+    self.mainTable.delegate = self;
+    self.mainTable.rowHeight = 40;
+    [self.mainTable registerClass:[UITableViewCell class] forCellReuseIdentifier:@"HomeCell"];
     // 设置回调（一旦进入刷新状态就会调用这个refreshingBlock）
     self.mainTable.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
         [wself startRequest];
@@ -42,32 +47,32 @@
     [BGEngine homepageByParam:nil contentWithBlock:^(NSDictionary *result, NSError *error) {
         if (nil == error) {
             NSArray* list = result[@"list"];
-            DLog(@"---Home List---%@",list);
             if ([list isKindOfClass:[NSArray class]]) {
                 for (NSDictionary* dic in list) {
-                    NSDictionary* item = @{@"id": dic[@"id"],
+                    NSDictionary* item = @{@"id":   dic[@"id"],
                                            @"text": dic[@"text"]};
                     [self.dataList addObject:item];
                 }
-                
             }
             DLog(@"---DATA List---count:%zd, %@",self.dataList.count, self.dataList);
+            [self.mainTable reloadData];
         }else{
             DLog(@"--error.code = %zd, description = %@", error.code, [error localizedDescription]);
-            
         }
         [self.mainTable.mj_header endRefreshing];
     }];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return self.dataList.count;
 }
-*/
+
+-(UITableViewCell* )tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    UITableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:@"HomeCell" forIndexPath:indexPath];
+    NSDictionary* item = self.dataList[indexPath.row];
+    cell.textLabel.text = item[@"text"];
+    return cell;
+    
+}
 
 @end

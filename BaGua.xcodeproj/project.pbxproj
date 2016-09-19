@@ -38,7 +38,6 @@
 		F0532EB61D8FB85100E87BE4 /* UIView+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = F0532EA21D8FB85100E87BE4 /* UIView+MJExtension.m */; };
 		F0F7D58C1D82BD6600C88E2B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F0F7D58B1D82BD6600C88E2B /* main.m */; };
 		F0F7D58F1D82BD6600C88E2B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F0F7D58E1D82BD6600C88E2B /* AppDelegate.m */; };
-		F0F7D5921D82BD6600C88E2B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0F7D5911D82BD6600C88E2B /* ViewController.m */; };
 		F0F7D5951D82BD6700C88E2B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0F7D5931D82BD6700C88E2B /* Main.storyboard */; };
 		F0F7D5971D82BD6700C88E2B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F0F7D5961D82BD6700C88E2B /* Assets.xcassets */; };
 		F0F7D59A1D82BD6700C88E2B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0F7D5981D82BD6700C88E2B /* LaunchScreen.storyboard */; };
@@ -109,8 +108,6 @@
 		F0F7D58B1D82BD6600C88E2B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F0F7D58D1D82BD6600C88E2B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F0F7D58E1D82BD6600C88E2B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		F0F7D5901D82BD6600C88E2B /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		F0F7D5911D82BD6600C88E2B /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		F0F7D5941D82BD6700C88E2B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F0F7D5961D82BD6700C88E2B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = BaGua/Assets.xcassets; sourceTree = "<group>"; };
 		F0F7D5991D82BD6700C88E2B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -284,8 +281,6 @@
 				F00A59E11D86836F00754746 /* Network */,
 				F0F7D58D1D82BD6600C88E2B /* AppDelegate.h */,
 				F0F7D58E1D82BD6600C88E2B /* AppDelegate.m */,
-				F0F7D5901D82BD6600C88E2B /* ViewController.h */,
-				F0F7D5911D82BD6600C88E2B /* ViewController.m */,
 				F00A59D31D867DC600754746 /* HomeViewController.h */,
 				F00A59D41D867DC600754746 /* HomeViewController.m */,
 			);
@@ -388,7 +383,6 @@
 				F00A59F21D86839700754746 /* AFSecurityPolicy.m in Sources */,
 				F0532EAB1D8FB85100E87BE4 /* MJRefreshBackGifFooter.m in Sources */,
 				F00A59DD1D86833E00754746 /* BGClient.m in Sources */,
-				F0F7D5921D82BD6600C88E2B /* ViewController.m in Sources */,
 				F00A59F41D86839700754746 /* AFURLResponseSerialization.m in Sources */,
 				F0532EAE1D8FB85100E87BE4 /* MJRefreshGifHeader.m in Sources */,
 				F0532EB31D8FB85100E87BE4 /* NSBundle+MJRefresh.m in Sources */,

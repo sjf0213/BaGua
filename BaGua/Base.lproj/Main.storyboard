@@ -52,7 +52,7 @@
                             <constraint firstItem="TLw-lL-Gz7" firstAttribute="leading" secondItem="ueR-55-o7f" secondAttribute="leading" id="1Li-6d-W2V"/>
                             <constraint firstAttribute="trailing" secondItem="TLw-lL-Gz7" secondAttribute="trailing" id="Eqb-CY-Xgm"/>
                             <constraint firstItem="8Hz-ft-spK" firstAttribute="leading" secondItem="ueR-55-o7f" secondAttribute="leading" id="PRb-8G-mXR"/>
-                            <constraint firstAttribute="bottom" secondItem="8Hz-ft-spK" secondAttribute="bottom" id="TF3-re-bOI"/>
+                            <constraint firstItem="WWP-ra-yOY" firstAttribute="top" secondItem="8Hz-ft-spK" secondAttribute="bottom" id="avD-Pf-8Rm"/>
                             <constraint firstItem="TLw-lL-Gz7" firstAttribute="top" secondItem="ueR-55-o7f" secondAttribute="top" id="xVI-oH-T26"/>
                         </constraints>
                     </view>
