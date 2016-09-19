@@ -11,12 +11,14 @@
 #import "MJRefresh.h"
 @interface HomeViewController ()
 @property (strong, nonatomic) IBOutlet UITableView* mainTable;
+@property (strong, nonatomic) NSMutableArray* dataList;
 @end
 
 @implementation HomeViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.dataList = [NSMutableArray array];
     __weak typeof(self) wself = self;
     // 设置回调（一旦进入刷新状态就会调用这个refreshingBlock）
     self.mainTable.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
@@ -31,6 +33,7 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+    
 }
 
 -(void)startRequest
@@ -38,8 +41,17 @@
     
     [BGEngine homepageByParam:nil contentWithBlock:^(NSDictionary *result, NSError *error) {
         if (nil == error) {
-            DLog(@"---Home List---%@",result);
-            
+            NSArray* list = result[@"list"];
+            DLog(@"---Home List---%@",list);
+            if ([list isKindOfClass:[NSArray class]]) {
+                for (NSDictionary* dic in list) {
+                    NSDictionary* item = @{@"id": dic[@"id"],
+                                           @"text": dic[@"text"]};
+                    [self.dataList addObject:item];
+                }
+                
+            }
+            DLog(@"---DATA List---count:%zd, %@",self.dataList.count, self.dataList);
         }else{
             DLog(@"--error.code = %zd, description = %@", error.code, [error localizedDescription]);
             
